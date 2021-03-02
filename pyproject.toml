@@ -1,0 +1,54 @@
+[tool.poetry]
+name = "open-event-scripts"
+version = "0.1.0"
+description = ""
+authors = ["Areeb Jamal <jamal.areeb@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.25.1"
+pytz = "^2021.1"
+python-dateutil = "^2.8.1"
+
+[tool.poetry.dev-dependencies]
+pre-commit = "^2.10.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 90
+target-version = ['py38']
+skip-string-normalization = true
+exclude = '''
+
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )/
+)
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 90
+skip = '.venv/'
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+
+[tool.pycln]
+path = "scripts/"
+exclude = "(.venv/)"
+all = true
