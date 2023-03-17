@@ -2,30 +2,44 @@
 
 Useful scripts for managing events using Open Event API
 
-## Instructions
+## Syestem Requirements
+Before installing open-event-scripts, make sure that your system meets the following requirements:
 
-```sh
-poetry install
-```
+    - python 3.x 
+    - pip package manager 
+    
+## Installation Steps
+Follow these steps to install the open-event-scripts.
 
-```sh
-poetry shell
-```
+1. Clone the open-event-scripts repository: 
 
-OR 
+    ``` git clone https://github.com/fossasia/open-event-scripts.git ```
+ 
+2. Change into open-event-scripts:
+ 
+   ```  cd open-event-scripts ```
+ 
+ 3. Install the required python packages using pip: 
 
-Using pip
+     ``` pip install -r requirements.txt ```
 
-```sh
-pip install -r requirements.txt
-```
+    Or using: 
 
+     ``` peotry install ```
+     
+
+     ```peotry shell ```
+
+        
 ## Usage
+Use this script to change the event schedule: 
 
-```sh
-python scripts/reschedule.py <event_identifier>
-```
+  ```
+  python scripts/reschedule.py <event_identifier>
+  ```
 
-```sh
-python scripts/generate_session_tweet_csv.py <event_identifier>
-```
+Use this script to generate session of tweets: 
+
+  ```
+  python scripts/generate_session_tweet_csv.py <event_identifier>
+  ```
