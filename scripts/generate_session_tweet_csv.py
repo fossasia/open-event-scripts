@@ -71,12 +71,13 @@ def generate_row(session, track, speakers, template=None):
     photos = list(filter(bool, map(lambda sp: sp['attributes']['photo-url'], speakers)))
 
     starts_at = session['attributes']['starts-at']
-    starts_at_time = parser.parse(starts_at).astimezone(timezone) - delta
+    if starts_at: 
+        starts_at_time = parser.parse(starts_at).astimezone(timezone) - delta
 
     return (
         text,
         photos[0] if photos else None,
-        starts_at_time.strftime('%Y-%m-%d %H:%M'),
+        starts_at_time.strftime('%Y-%m-%d %H:%M') if starts_at else None,
     )
 
 
