@@ -20,9 +20,9 @@ with open(csv_file_name) as csv_file:
                })
         )
 
-print(f'Emails to be sent to {len(to_emails)}:\n\n')
+print(f'Emails to be sent to the following email adresses (total: {len(to_emails)}):\n')
 for i in to_emails:
-    print(i)
+    print(i.email)
 
 do_send_ = input('Really send emails? (y/N)? ')
 
