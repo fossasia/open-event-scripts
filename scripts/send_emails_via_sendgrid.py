@@ -47,19 +47,26 @@ to_emails_test = [
 ]
 
 message = Mail(
-    from_email=('office@fossasia.org', 'FOSSASIA Office'),
+    from_email=('info@eventyay.com', 'Mario Behling - Eventyay'),
     to_emails=to_emails,
-    subject='TEST EMAIL Access codes for Wikimania',
-    plain_text_content="""Hi -name-
+    subject='Your Wikimania Free Ticket',
+    plain_text_content="""Hello,
 
-Here is your access token:
+You are receiving this email from the Eventyay platform, which is used to run Wikimania 2023. 
+
+As part of your scholarship, the Wikimania team has reserved a free ticket for you. Please register for free by following this link:
+
    -url-
 
-A better email is hopefully written by Mario!
+The link is valid for one ticket.
 
-Enjoy
+Wikimania 2023 will run from 16–19 August in Singapore at the Suntec Singapore Convention and Exhibition Centre and online. Workshops, hackathon and pre-conference activities happen on 15 August while post-conference and city tours happen on 20 August, so please plan to stay for those if you are interested!
 
-The FOSSASIA Team
+Should you encounter any issues, please respond to this email.
+
+Thank you and best regards,
+
+Mario and the Eventyay Team
 """,
     is_multiple=True)
 
