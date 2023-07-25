@@ -10,6 +10,8 @@ requests = "^2.25.1"
 pytz = "^2021.1"
 python-dateutil = "^2.8.1"
 sendgrid = "^6.10.0"
+pandas = "^2.0.3"
+openpyxl = "^3.1.2"
 
 [tool.poetry.dev-dependencies]
 pre-commit = "^2.10.1"
